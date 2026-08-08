@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>AI School Emergency Helper</title>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Header -->
+  <header class="hero">
+
+    <div class="team">
+      🤖 Team: AI Horizon
+    </div>
+
+    <h1>🚑 AI School<br>Emergency Helper</h1>
+
+    <p>ফাইয়াজ স্কুল এন্ড কলেজ, রংপুর</p>
+
+  </header>
+
+
+  <main>
+
+    <!-- Emergency Categories -->
+    <section class="card">
+
+      <h2>⚠️ জরুরি ক্যাটাগরি বেছে নিন</h2>
+
+      <button class="emergency fire" onclick="openEmergency('আগুন')">
+        🔥<br>
+        আগুন
+      </button>
+
+      <button class="emergency accident" onclick="openEmergency('দুর্ঘটনা')">
+        🩹<br>
+        দুর্ঘটনা / আঘাত
+      </button>
+
+      <button class="emergency electricity" onclick="openEmergency('বিদ্যুৎ')">
+        ⚡<br>
+        বিদ্যুৎ
+      </button>
+
+      <button class="emergency water" onclick="openEmergency('পানি')">
+        🌊<br>
+        পানি / ডুবে যাওয়া
+      </button>
+
+      <button class="emergency disaster" onclick="openEmergency('প্রাকৃতিক দুর্যোগ')">
+        🌪️<br>
+        প্রাকৃতিক দুর্যোগ
+      </button>
+
+    </section>
+
+
+    <!-- Smart Help -->
+    <section class="card">
+
+      <h2>🧠 Smart Help & Voice Assistant</h2>
+
+      <textarea
+        id="question"
+        placeholder="এখানে সমস্যা লিখুন বা মাইকে কথা বলুন..."
+      ></textarea>
+
+      <button class="voice-button" onclick="startVoice()">
+        🎤 কথা বলে সমস্যা জানান
+      </button>
+
+      <button class="smart-button" onclick="smartHelp()">
+        ⚙️ Smart Help
+      </button>
+
+      <p id="voiceStatus"></p>
+
+      <div id="answer" class="answer">
+        আপনার সমস্যা নির্বাচন করুন অথবা
+        ভয়েস ইনপুট দিয়ে Smart Help চাপুন।
+        এখানে নিরাপদ নির্দেশনা প্রদর্শিত হবে।
+      </div>
+
+      <button class="speak-button" onclick="speakAnswer()">
+        🔊 নির্দেশনা শুনুন (Voice Output)
+      </button>
+
+    </section>
+
+
+    <!-- Emergency Contacts -->
+    <section class="card">
+
+      <h2>📞 জরুরি যোগাযোগ নম্বর</h2>
+
+      <div class="contact">
+        🛡️
+        <strong>জাতীয় জরুরি সেবা</strong>
+        <br>
+        <a href="tel:999">999</a>
+      </div>
+
+      <div class="contact">
+        🚒
+        <strong>ফায়ার সার্ভিস</strong>
+        <br>
+        <a href="tel:102">102</a>
+      </div>
+
+    </section>
+
+
+    <!-- Safety Notice -->
+    <section class="notice">
+
+      ⚠️ <strong>গুরুত্বপূর্ণ:</strong>
+
+      জরুরি পরিস্থিতিতে শান্ত থাকুন এবং
+      কাছের শিক্ষক, অভিভাবক বা দায়িত্বশীল ব্যক্তিকে
+      দ্রুত জানান।
+
+    </section>
+
+  </main>
+
+
+  <!-- Emergency Popup -->
+  <div id="modal" class="modal">
+
+    <div class="modal-box">
+
+      <button class="close" onclick="closeEmergency()">×</button>
+
+      <h2 id="modalTitle">জরুরি নির্দেশনা</h2>
+
+      <p id="modalText"></p>
+
+      <button class="speak-button" onclick="speakInstruction()">
+        🔊 নির্দেশনা শুনুন
+      </button>
+
+    </div>
+
+  </div>
+
+
+  <script src="script.js"></script>
+
+</body>
+  </html>
