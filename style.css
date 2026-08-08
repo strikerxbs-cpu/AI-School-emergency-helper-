@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, "Noto Sans Bengali", sans-serif;
+  background: #f1f4f8;
+  color: #17345f;
+  line-height: 1.7;
+}
+
+/* Header */
+.hero {
+  background: linear-gradient(135deg, #173f7a, #2d5da5);
+  color: white;
+  text-align: center;
+  padding: 28px 18px 32px;
+  border-bottom: 7px solid #ffc400;
+}
+
+.team {
+  display: inline-block;
+  background: rgba(255,255,255,0.18);
+  padding: 8px 22px;
+  border-radius: 30px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: 38px;
+  line-height: 1.25;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  font-size: 21px;
+}
+
+/* Main */
+main {
+  max-width: 700px;
+  margin: auto;
+  padding: 22px 16px;
+}
+
+/* Cards */
+.card {
+  background: white;
+  border-radius: 25px;
+  padding: 25px;
+  margin-bottom: 24px;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.10);
+}
+
+.card h2 {
+  font-size: 27px;
+  margin-bottom: 20px;
+  border-bottom: 2px solid #eeeeee;
+  padding-bottom: 12px;
+}
+
+/* Emergency Buttons */
+.emergency {
+  width: 100%;
+  border: none;
+  border-radius: 22px;
+  color: white;
+  padding: 25px 15px;
+  margin: 9px 0;
+  font-size: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+}
+
+.emergency:active {
+  transform: scale(0.98);
+}
+
+.fire {
+  background: linear-gradient(135deg, #ff4057, #ff3025);
+}
+
+.accident {
+  background: linear-gradient(135deg, #ff571c, #ffad16);
+}
+
+.electricity {
+  background: linear-gradient(135deg, #ffc400, #ffdf00);
+  color: #222;
+}
+
+.water {
+  background: linear-gradient(135deg, #1687e8, #43b4ff);
+}
+
+.disaster {
+  background: linear-gradient(135deg, #3575d3, #4da2df);
+}
+
+/* Textarea */
+textarea {
+  width: 100%;
+  min-height: 110px;
+  border: 3px solid #cccccc;
+  border-radius: 18px;
+  padding: 15px;
+  font-size: 19px;
+  resize: vertical;
+  outline: none;
+}
+
+textarea:focus {
+  border-color: #1976d2;
+}
+
+/* General buttons */
+.voice-button,
+.smart-button,
+.speak-button {
+  width: 100%;
+  border: none;
+  border-radius: 18px;
+  padding: 18px;
+  margin-top: 14px;
+  color: white;
+  font-size: 21px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.voice-button {
+  background: #df3048;
+}
+
+.smart-button {
+  width: 60%;
+  background: #1675ed;
+}
+
+.speak-button {
+  background: #15965d;
+}
+
+/* Voice status */
+#voiceStatus {
+  text-align: center;
+  color: #d62839;
+  font-weight: bold;
+  font-size: 17px;
+  margin-top: 12px;
+}
+
+/* Answer */
+.answer {
+  background: #eef3f7;
+  border-left: 7px solid #1976ed;
+  border-radius: 8px;
+  padding: 18px;
+  margin-top: 20px;
+  font-size: 19px;
+  color: #333;
+}
+
+/* Emergency Contacts */
+.contact {
+  background: #f5f7fa;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  padding: 18px;
+  margin: 12px 0;
+  font-size: 20px;
+}
+
+.contact a {
+  color: #126bd6;
+  font-size: 27px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* Notice */
+.notice {
+  background: #fff8df;
+  border-left: 6px solid #ffc400;
+  border-radius: 12px;
+  padding: 18px;
+  margin-bottom: 30px;
+  font-size: 18px;
+  color: #444;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.65);
+  padding: 25px;
+}
+
+.modal-box {
+  background: white;
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 28px;
+  border-radius: 25px;
+  position: relative;
+}
+
+.modal-box h2 {
+  color: #173f7a;
+  margin-bottom: 18px;
+  font-size: 28px;
+}
+
+.modal-box p {
+  font-size: 20px;
+  color: #333;
+  white-space: pre-line;
+}
+
+.close {
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  border: none;
+  background: #eeeeee;
+  border-radius: 50%;
+  width: 42px;
+  height: 42px;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .hero p {
+    font-size: 18px;
+  }
+
+  .team {
+    font-size: 17px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .card h2 {
+    font-size: 23px;
+  }
+
+  .emergency {
+    font-size: 22px;
+    padding: 23px 10px;
+  }
+
+  .smart-button {
+    width: 65%;
+  }
+    }
